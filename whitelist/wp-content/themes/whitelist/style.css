@@ -1,0 +1,300 @@
+/*!
+Theme Name: whitelist
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: whitelist
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+whitelist is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+:root {
+    --fw-light : 300;
+    --fw-normal : 400;
+    --fw-medium : 500;
+    --fw-semi-bold : 600;
+    --fw-bold : 700;
+    --fw-extra-bold : 800;
+    --fw-black : 900;
+    --primary-white: #fff8f8;
+    --primary-light-grey: #efefef;
+    --primary-medium-grey: #ddd;
+    --primary-grey: #bbb;
+    --primary-black: #333;
+    --primary-main: #046bd2;
+    --color-warning: #ff0000;
+    --color-success: #007b00;
+}
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--fw-normal);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+#primary {
+    flex: 1;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fw-bold);
+}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span, li span {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+p, a, li, input, textarea, select, label {
+    margin-bottom: 0;
+}
+.btn, .btn:hover, .btn:focus, .btn:visited, a, a:hover, a:focus, a:visited, a.btn, a.btn:hover, a.btn:focus, a.btn:visited, button, button:hover, button:focus, button:visited, button.btn, button.btn:hover, button.btn:focus, button.btn:visited, .input-control, .input-control:hover, .input-control:focus, .input-control:visited, input, input:hover, input:focus, input:visited, input.input-control, input.input-control:hover, input.input-control:focus, input.input-control:visited, textarea, textarea:hover, textarea:focus, textarea:visited, textarea.input-control, textarea.input-control:hover, textarea.input-control:focus, textarea.input-control:visited, select, select:hover, select:focus, select:visited, select.input-control, select.input-control:hover, select.input-control:focus, select.input-control:visited {
+    box-shadow: none;
+    outline: none;
+}
+.btn-default, a.btn-default, button {
+    border: 1px solid var(--primary-main);
+    background-color: var(--primary-main);
+    color: var(--primary-white);
+}
+.btn-default:hover, a.btn-default:hover, button.btn-default:hover {
+    border-color: var(--primary-main);
+    color: var(--primary-main);
+    background-color: var(--primary-white);
+}
+.input-control, input.input-control, textarea.input-control, select.input-control {
+    border: 1px solid #999;
+}
+.input-control:focus, input.input-control:focus, textarea.input-control:focus, select.input-control:focus {
+    border-color: var(--primary-main);
+}
+.input-control.focus-error, input.input-control.focus-error, textarea.input-control.focus-error, select.input-control.focus-error {
+    border-color: var(--color-warning);
+}
+.link:not(:hover), a:not(:hover), a.link:not(:hover) {
+    text-decoration: none;
+}
+button, .btn, a.btn, button.btn {
+    background-color: var(--primary-main);
+    border: 1px solid var(--primary-main);
+    color: var(--primary-white);
+    padding: 8px 24px;
+}
+.input-control {
+    padding: 10px 20px;
+    border-radius: 8px;
+    height: auto;
+}
+.loading, .backdrop::before {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.loading .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -24px;
+    margin-right: -24px;
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--primary-white);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+.loading, .backdrop::before {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.error {
+    display: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-warning);
+}
+.error.success {
+    color: var(--color-success);
+}
+.error.failed, .error.success {
+    margin-top: 25px;
+}
+form.disabled {
+    filter: blur(1px);
+}
+form.disabled, form.disabled input, form.disabled textarea, form.disabled select, form.disabled button {
+    pointer-events: none;
+}
+form input, form textarea, form select, form.wp-form input, form.wp-form textarea, form.wp-form select, form input, form textarea, form select {
+    height: auto;
+}
+label, form input, form textarea, form select, form.wp-form input, form.wp-form textarea, form.wp-form select {
+    display: block;
+    width: 100%;
+}
+label {
+    margin-bottom: 6px;
+}
+form button[type="submit"]:focus, form input[type="submit"]:focus {
+    border: 1px solid var(--primary-main);
+    color: var(--primary-main);
+}
+.wp-form, .wp-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.wp-form-row, .wp-form-group, .iti {
+    width: 100%;
+}
+.wp-form-group {
+    display: block;
+}
+.wp-form-tab div[class*='form-tab-'] {
+    border-radius: 12px;
+    background-color: var(--primary-light-grey);
+}
+.password-wrapper input[type="password"] {
+    padding-right: 56px;
+}
+.password-wrapper .show-password {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 100%;
+    padding: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.password-wrapper .show-password:focus {
+    outline: var(--color-warning) solid 1px;
+}
+.btn {
+    border: 1px solid var(--primary-main);
+    background-color: var(--primary-main);
+    color: var(--primary-white);
+}
+.btn.btn-submit {
+    display: block;
+    margin: 0 auto;
+}
+.btn.btn-submit:hover {
+    border-color: var(--primary-main);
+    color: var(--primary-main);
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.navbar-brand {
+    display: block;
+    width: 60px;
+}
+#page, .navbar-row {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#page > main {
+    flex: 1;
+    padding-left: 100px;
+}
+.hamburger {
+    cursor: pointer;
+}
+#masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    padding: 30px 15px;
+    box-shadow: 3px 0 10px 0 rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-white);
+    z-index: 9;
+    transition: all 0.3s ease;
+}
+#masthead.navbar-opened{
+    transform: translateX(0);
+    width: 300px;
+}
+#masthead .menu-container {
+    padding-top: 210px;
+    max-height: 100vh;
+}
+#masthead .navbar-brand, #masthead .hamburger {
+    position: fixed;
+    z-index: 2;
+}
+#masthead .navbar-brand {
+    left: 15px;
+    top: 30px;
+}
+#masthead .navbar-nav {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    width: 270px;
+    transition: all 0.6s ease;
+}
+#masthead.navbar-opened .navbar-nav {
+    opacity: 1;
+    visibility: visible;
+}
+#masthead .hamburger {
+    top: 120px;
+    left: 15px;
+}
+table, table th, table td {
+    border-collapse: collapse;
+    border: 1px solid var(--primary-light-grey);
+    background-color: var(--primary-grey);
+}
+table th, table td {
+    padding: 8px 16px;
+}
+table thead th, table thead td {
+    border-bottom: 3px solid var(--primary-light-grey);
+}
+table tbody tr:nth-child(odd) th, table tbody tr:nth-child(odd) td {
+    background-color: var(--primary-light-grey);
+}
+table tbody tr:nth-child(even) th, table tbody tr:nth-child(even) td {
+    background-color: var(--primary-medium-grey);
+}

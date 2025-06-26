@@ -1,0 +1,21 @@
+.page-template-page-login .site-main {
+    display: flex;
+    flex-direction: column;
+}
+.section-login {
+    flex: 1;
+}
+.section-login > div[class*='container'] > .row {
+    height: 100vh;
+}
+.login-site-logo {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+}
+.form-login {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: var(--primary-white);
+    border: 1px solid var(--primary-grey);
+}

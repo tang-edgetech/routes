@@ -1,0 +1,160 @@
+/**
+Theme Name: Astra Child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+:root {
+    --fw-light : 300;
+    --fw-normal : 400;
+    --fw-medium : 500;
+    --fw-semi-bold : 600;
+    --fw-bold : 700;
+    --fw-extra-bold : 800;
+    --fw-black : 900;
+    --primary-white: #eee;
+    --primary-grey: #bbb;
+    --primary-black: #333;
+    --primary-main: #046bd2;
+}
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--fw-normal);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+#primary {
+    flex: 1;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fw-bold);
+}
+p, a, li, input, textarea, select, label {
+    margin-bottom: 0;
+}
+.btn, .btn:hover, .btn:focus, .btn:visited, a, a:hover, a:focus, a:visited, a.btn, a.btn:hover, a.btn:focus, a.btn:visited, button, button:hover, button:focus, button:visited, button.btn, button.btn:hover, button.btn:focus, button.btn:visited, .input-control, .input-control:hover, .input-control:focus, .input-control:visited, input, input:hover, input:focus, input:visited, input.input-control, input.input-control:hover, input.input-control:focus, input.input-control:visited, textarea, textarea:hover, textarea:focus, textarea:visited, textarea.input-control, textarea.input-control:hover, textarea.input-control:focus, textarea.input-control:visited, select, select:hover, select:focus, select:visited, select.input-control, select.input-control:hover, select.input-control:focus, select.input-control:visited {
+    box-shadow: none;
+    outline: none;
+}
+.input-control {
+    padding: 8px 20px;
+    border-radius: 8px;
+    height: auto;
+}
+.loading, .backdrop::before {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.loading .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -24px;
+    margin-right: -24px;
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+.loading, .backdrop::before {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.error {
+    display: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ff0000;
+}
+.error.success {
+    color: #007b00;
+}
+.error.failed, .error.success {
+    margin-top: 25px;
+}
+form.disabled {
+    filter: blur(1px);
+}
+form.disabled, form.disabled input, form.disabled textarea, form.disabled select, form.disabled button {
+    pointer-events: none;
+}
+form input, form textarea, form select, form.wp-form input, form.wp-form textarea, form.wp-form select, form input, form textarea, form select {
+    height: auto;
+}
+label {
+    margin-bottom: 6px;
+}
+.wp-form {
+    padding: 25px;
+    background-color: var(--primary-white);
+    border: 1px solid var(--primary-grey);
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.wp-form, .wp-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.wp-form-row, .wp-form-group {
+    width: 100%;
+}
+.wp-form-group {
+    display: block;
+}
+.password-wrapper input[type="password"] {
+    padding-right: 56px;
+}
+.password-wrapper .show-password {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+}
+.btn {
+    border: 1px solid var(--primary-main);
+    background-color: var(--primary-main);
+    color: var(--primary-white);
+}
+.btn.btn-submit {
+    display: block;
+    margin: 0 auto;
+}
+.btn.btn-submit:hover {
+    border-color: var(--primary-main);
+    color: var(--primary-main);
+}
