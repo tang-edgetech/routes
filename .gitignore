@@ -35,6 +35,8 @@ wp-config.php
 # Example themes
 /wp-content/themes/twenty*/
 /whitelist/wp-content/themes/twenty*/
+/wp-content/themes/astra/
+/whitelist/wp-content/themes/astra/
 
 # Example plugin
 /wp-content/plugins/hello.php
