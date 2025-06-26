@@ -15,16 +15,30 @@
 /license.txt
 /readme.html
 /wp-*.php
-/xmlrpc.php
+/whitelist/xmlrpc.php
+/whitelist/wp-admin/
+/whitelist/wp-content/index.php
+/whitelist/wp-content/languages
+/whitelist/wp-content/plugins/index.php
+/whitelist/wp-content/themes/index.php
+/whitelist/wp-includes/
+/whitelist/index.php
+/whitelist/license.txt
+/whitelist/readme.html
+/whitelist/wp-*.php
+/whitelist/xmlrpc.php
 
 # Configuration
 wp-config.php
+/whitelist/wp-config.php
 
 # Example themes
 /wp-content/themes/twenty*/
+/whitelist/wp-content/themes/twenty*/
 
 # Example plugin
 /wp-content/plugins/hello.php
+/whitelist/wp-content/plugins/hello.php
 
 # Uploads
 # /wp-content/uploads/
@@ -34,6 +48,7 @@ wp-config.php
 
 # htaccess
 /.htaccess
+/whitelist/.htaccess
 
 # All plugins
 #
